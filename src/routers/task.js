@@ -21,7 +21,7 @@ router.get('/tasks',auth,async(req,res)=>{
     const match={}
     const sort={}
 
-    ggg=7
+    
     if(req.query.completed){
         match.completed = req.query.completed==='true'
     }
@@ -40,13 +40,15 @@ router.get('/tasks',auth,async(req,res)=>{
                 skip: parseInt(req.query.skip),
                 sort
             }
-        }).execPopulate()
+        }
+        ).execPopulate()
         res.send(req.user.tasks)
     }
     catch(e){ 
         res.status(500).send(e)
     }
 })
+
 router.get('/tasks/:id',auth,async(req,res)=>{
     
     try{

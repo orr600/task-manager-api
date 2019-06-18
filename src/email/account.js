@@ -12,7 +12,7 @@ const sendWelcomeMail= (email,name)=>{
 }
 
 const sendCancelationMail= (email,name)=>{
-    console.log(email,name)
+    
     sgMail.send({
         to: email,
         from: 'orr600@gmail.com',

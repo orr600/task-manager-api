@@ -1,3 +1,5 @@
 node_modules
 mongodb.js
-dev.env
+config
+tests
+
